@@ -20,6 +20,8 @@ int main(int argc, char** argv){
 	for(int i=0;  i<10; i++){
 		pthread_join(threads[i], (void**)&status[i]);
 		printf("%d\n", status[i]);
+	}
+	for(int i=0; i<10; i++){
 		t_sum = t_sum + status[i];
 	}
 	printf("The sum is %d\n", t_sum);
